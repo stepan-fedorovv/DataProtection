@@ -66,7 +66,7 @@ def masks(degree):
     text_mask = 0b11111111
     image_mask = 0b11111111
     text_mask <<= (8 - degree)
-    text_mask %= 256
+    text_mask %= 256  # Оставляю последние 8 битов
     image_mask >>= degree
     image_mask <<= degree
 
